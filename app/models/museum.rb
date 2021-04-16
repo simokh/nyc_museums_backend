@@ -1,3 +1,3 @@
 class Museum < ApplicationRecord
-    has_many :reviews, class_name: :review", foreign_key: "reference_id"
+    has_many :reviews
 end
