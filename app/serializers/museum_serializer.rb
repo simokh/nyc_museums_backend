@@ -1,4 +1,5 @@
-class MuseumSerializer
+class MuseumSerializer 
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :name, :borough, :img_url
+  has_many :reviews
 end
