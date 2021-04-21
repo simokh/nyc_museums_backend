@@ -10,18 +10,18 @@ class Api::V1::MuseumsController < ApplicationController
         
     end
 
-    def create 
-        museum = Museum.new(museum_params)
-        if museum.save
-        render json: museum.to_json, status: :accepted
-        else
-            render json: {errors: museum.errors.full_messages}, status: :unprocessible_entity 
-        end
-    end
+    # def create 
+        # museum = Museum.new(museum_params)
+    #     if museum.save
+    #     render json: museum.to_json, status: :accepted
+    #     else
+    #         render json: {errors: museum.errors.full_messages}, status: :unprocessible_entity 
+    #     end
+    # end
 
-    private 
+    # private 
 
-    def museum_params
-        params.require(museum).permit(:name, :borough, :img_url)
-    end
+    # def museum_params
+    #     params.require(museum).permit(:name, :borough, :img_url)
+    # end
 end

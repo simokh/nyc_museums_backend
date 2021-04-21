@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_16_043445) do
+ActiveRecord::Schema.define(version: 2021_04_21_160307) do
 
   create_table "museums", force: :cascade do |t|
     t.string "name"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_04_16_043445) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "review"
+    t.string "review_post"
     t.integer "rating"
     t.integer "museum_id", null: false
     t.datetime "created_at", precision: 6, null: false
