@@ -17,4 +17,4 @@ qm = Museum.create(name: "Queens Museum", borough: "Queens", img_url: "https://u
 sim = Museum.create(name: "El Museo del Barrio", borough: "New York", img_url: "https://upload.wikimedia.org/wikipedia/commons/c/ca/WTM3_The_Fixers_0056.jpg")
 
 
-rev_1 = Review.create(review_post: "I love this one!!!", rating: "5", museum_id: met.id)
+# rev_1 = Review.create(review_post: "I love this one!!!", rating: "5", museum_id: met.id)

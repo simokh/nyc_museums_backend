@@ -14,8 +14,9 @@ class Api::V1::ReviewsController < ApplicationController
 
 
     def create 
-        
+        # byebug
         review = Review.new(strong_params)
+        
         if review.save
         render json: ReviewSerializer.new(review), status: :accepted 
         else
@@ -23,9 +24,22 @@ class Api::V1::ReviewsController < ApplicationController
         end
     end
 
+    def show
+        review = Review.find(params[:id])
+        render json: ReviewSerializer.new(review)
+    end
+
+
+    def destroy
+        review = Review.find(params[:id])
+        review.destroy
+        render json: {message: "Successfully deleted!"}
+    end
+
     private 
 
     def strong_params
         params.require(:review).permit(:review_post, :rating, :museum_id)
     end
+
 end
